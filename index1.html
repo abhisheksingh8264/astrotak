@@ -1,0 +1,648 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap" rel="stylesheet">
+<title>
+Talk to Astrologers
+</title>
+<!-- All Styling of the page-->
+<style>
+ .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+.nav .nav__link img{
+    height:20px;
+}
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: #eeeeee;
+}
+
+.nav__link--active {
+    color:#FF5733 ;
+}
+
+.nav__icon {
+    font-size: 18px;
+}
+body{
+    color:grey;
+    background-size:cover;
+    font-size:16px;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing:0.7px;
+}
+.elements{
+    
+    height:100%;
+    align-items:center;
+}
+.header{
+    height:150px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    
+    
+}
+
+.text{
+    width:50%;
+    letter-spacing:0.2px;
+    align-item:left;
+    margin-left:60px;
+    color:grey;
+    font-family:Arial;
+    margin-top:100px;
+}
+.quote1{
+    width:100%;
+}
+.logoG{
+    
+    float:right;
+    margin-top:-100px;
+    margin-right:-120px;
+    align-item:center;
+    
+    }
+    .imgs{
+        margin-right:20px;
+        width:100%
+        height:50px;
+        color:#fff;
+    }
+    .imgs h1{
+        margin-top:110px;
+        color:black;
+        margin-left:30px; 
+        font-size:18px;
+        width:100%;
+    }
+    .imgs img{
+        height:22px;
+        margin-top:-20px;
+        margin-left:10px;
+        float:right;
+        
+    }
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); *{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; } nav{  width: 100%;  align-items: center; justify-content: space-between; padding: 0 50px 0 100px; flex-wrap: wrap; } nav .logo{ color: #fff; font-size: 35px; font-weight: 600; } nav ul{ display: flex; flex-wrap: wrap; list-style: none; } nav ul li{ margin: 0 5px; } nav ul li a{ color: #f2f2f2; text-decoration: none; font-size: 18px; font-weight: 500; padding: 8px 15px; border-radius: 5px; letter-spacing: 1px; transition: all 0.3s ease; } nav ul li a.active, nav ul li a:hover{ color: #111; background: #fff; } nav .menu-btn i{ color: #fff; font-size: 22px; cursor: pointer; display: none; } input[type="checkbox"]{ display: none; } @media (max-width: 1000px){ nav{ padding: 0 40px 0 50px; } } @media (max-width: 2020px) { nav .menu-btn i{ display: block; } #click:checked ~ .menu-btn i:before{ content: "\f00d"; } nav ul{ position: fixed; top: 80px; left: -100%; background: #111; height: 100vh; width: 100%; text-align: center; display: block; transition: all 0.3s ease; } #click:checked ~ ul{ left: 0; } nav ul li{ width: 100%; margin: 40px 0; } nav ul li a{ width: 100%; margin-left: -100%; display: block; font-size: 20px; transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); } #click:checked ~ ul li a{ margin-left: 0px; } nav ul li a.active, nav ul li a:hover{ background: none; color: cyan; } } .content{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: -1; width: 100%; padding: 0 30px; color: #1b1b1b; } .content div{ font-size: 20px; font-weight: 700; }
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top:150px;
+}
+td img{
+    height:140px;
+    margin-left:-10px;
+}
+.seperate{
+    border-top:2px solid grey;
+}
+
+.form_control {
+    border: 1px solid #0002;
+    background-color: transparent;
+    outline: none;
+    padding: 8px 12px;
+    width:100% ;
+    color: #333;
+    margin-bottom: 15px;
+    display:none;
+}
+
+
+.form_control::placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
+
+.form_control:is(:hover, :focus) {
+    box-shadow: inset 0 1px 6px #0002;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #24b96f !important;
+}
+
+.warning {
+    background-color: #ebba33 !important;
+}
+
+.primary {
+    background-color: #259dff !important;
+}
+
+.secondery {
+    background-color: #00bcd4 !important;
+}
+
+.danger {
+    background-color: #ff5722 !important;
+}
+
+
+.action_btn {
+    display: inline-flex;
+    align-items: center;
+}
+
+.action_btn>* {
+    border: none;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 14px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.action_btn>*+* {
+    border-left: 1px solid #0003;
+}
+
+.action_btn>*:hover {
+    filter: hue-rotate(-20deg) brightness(0.97);
+    transform: scale(1.05);
+    border-color: transparent;
+    box-shadow: 0 2px 10px #0004;
+    border-radius: 4px;
+}
+
+.action_btn>*:active {
+    transform: scale(1);
+    box-shadow: 0 2px 5px #0004;
+}
+
+._table{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+._table :is(th,td){
+    border-bottom:1px solid grey;
+    padding: 8px 10px;
+    
+}
+.dtl button{
+    width:150px;
+    height:40px;
+    margin-left:;
+    border-radius:5px;
+    background-color:#FF5733;
+    border:none;
+    color:#fff;
+}
+.menu-btn img{
+    position:absolute;
+    float:left;
+    margin-top:30px;
+    height:20px;
+    margin-left:-20px;
+}
+.dtl h1{
+	font-size:16px; 
+	float:left; 
+	margin-top:-30px;
+	color:#000;
+}
+.dtl h2{
+	font-size:16px; 
+	color:grey;
+	float:right; 
+	margin-top:-30px;
+	margin-right:-20px;	
+}
+.dtl p{
+	color:black;
+	font-weight:300;  
+	font-size:14px; 
+	margin-top:-40px;
+}
+</style>
+</head>
+
+<!-- All Elements of the Page Starts from here-->
+<body>
+
+
+<div class="header">
+<nav>
+
+
+
+<input type="checkbox" id="click">
+
+<label for="click" class="menu-btn">
+
+<img src="https://1.bp.blogspot.com/-NsHsajLuYiM/YU6QGtKqg_I/AAAAAAAAAmg/yRdXhqBU-5gVXKWTxr_mNJMsfa6T3jORgCLcBGAsYHQ/s28/hamburger.png"/>
+
+</label>
+
+<ul>
+
+<li><a class="active" href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Services</a></li>
+
+<li><a href="#">Gallery</a></li>
+
+<li><a href="#">Feedback</a></li>
+
+</ul>
+
+</nav>
+
+
+<center>
+<img src="https://1.bp.blogspot.com/-YIRdEO9BVAs/YU6QTDaY1tI/AAAAAAAAAno/Ch3kTbpusSIQWnkI7LOAJUE5E8DL-7FuQCLcBGAsYHQ/s309/logo.png" style="height:80px; margin-left:-50px; position:absolute;"/>
+</center>
+<img src="https://1.bp.blogspot.com/-yFF7hkVg0sM/YU6QTFW52jI/AAAAAAAAAns/ty-Rhcm3MZQObZYYIzhSyFxve-c6ERaJwCLcBGAsYHQ/s114/profile.png" style="height:30px; float:right;margin-top:23px; margin-right:20px;"/>
+
+
+<div class="imgs" >
+<h1>
+Talk to Astrologer
+</h1>
+
+<img src="https://1.bp.blogspot.com/-0iFDQTW6Nvk/YVFgWk29OgI/AAAAAAAACQc/lcpzMEULkKUKXaA-2lUD89r6YF6MD8QTwCLcBGAsYHQ/s75/sort.png" />
+
+<img src="https://1.bp.blogspot.com/-zEpH2A5_u3Y/YVFgWp8ZrUI/AAAAAAAACQg/TT2l5zd5dKEP_fAmp5KRgMNXL4eXAl8XQCLcBGAsYHQ/s67/filter.png" />
+
+<button style="float:right; height:40px; margin-top:-20px;background:transparent; border:none;" onclick="myFunction()">
+
+<img src="https://1.bp.blogspot.com/-Z9-znccAsHg/YVFgckUOG2I/AAAAAAAACQk/SP3zunKlpNwqhPP1kplwjlCWmLPdtkHjACLcBGAsYHQ/s63/search.png
+" style="margin-right:10px; "/>
+</button>
+</div>
+</div>
+
+
+<!-- Botton Navigation Bar -->
+
+<nav class="nav">
+  <a href="index.html" class="nav__link ">
+    <img src="https://1.bp.blogspot.com/-zh9pKqXbUcE/YVFeOIn3xDI/AAAAAAAACQQ/fpyBHLQO01w74X8tJieJ5bFyFDMPPq_WQCLcBGAsYHQ/s1280/20210927_113111.png" />
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="#" class="nav__link nav__link--active">
+    <img src="https://1.bp.blogspot.com/-SisSr-Hdj5I/YVFdvVkUN_I/AAAAAAAACQI/jnAaGYMDSrIUoJOL2QsuDtC1xpbsE9EdQCLcBGAsYHQ/s1280/20210927_112852.png" style="height:27px;"/>
+    <span class="nav__text">Talk to astrologers</span>
+  </a>
+  <a href="#" class="nav__link">
+    <img src="https://1.bp.blogspot.com/-B8kVXm8qAOA/YU6QFYsf7KI/AAAAAAAAAmY/iwiBAJ6TJ7onb7xUxAmjS-GAoCmYZMyMgCLcBGAsYHQ/s53/ask.png" />
+    <span class="nav__text">Ask a Question</span>
+  </a>
+  <a href="#" class="nav__link">
+  <img src="https://1.bp.blogspot.com/-s3KaLGjZwqs/YU6QT_Af3dI/AAAAAAAAAnw/iNnqldVQCUIBYtD98SUbWlp-EHCJZ0mzQCLcBGAsYHQ/s54/reports.png" />
+    <span class="nav__text">Reports</span>
+  </a>
+  
+</nav>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+
+<div class="container">
+  <input type="search" oninput="filter_table(this, 'table_filter')" class="form_control" id="hide" placeholder="Search">
+  <table class="_table table_sort" >
+    <thead>
+    <th style="border:none;color:white;">
+    <tbody id="table_filter">
+      <tr>
+        
+        <td><img src="https://1.bp.blogspot.com/-H0XcnrrsvtQ/YVGDl8_3TaI/AAAAAAAACQ0/hz3hIKrQWr07jX36pOLhjVAxQlIxvrRJQCLcBGAsYHQ/s181/Screenshot_2021-09-27-14-09-04-74_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+        <br><br><br><br><br><br>
+        <br><br><br>
+        
+        
+        </td>
+        <td><div class="dtl">
+        <h1>
+        Arvind Shukla
+        </h1>
+        <h2>
+        25 years
+        </h2>
+        <p>
+        Coffee cup reading, Falit Jyotish
+        Kundali Grah Dosh,Vastu Astrology,
+        Vedic Astrology, Palmistry, Numerology, Face Reading,Tarot
+        <br>
+        </br>
+        English, Hindi
+        
+        <br>
+        <br>
+        <b>
+        Rs 100/Month
+        </b>
+        </p>
+        <br>
+      
+        <button >
+        Take a Call
+        </button>
+        </div>
+      
+        
+        </td>
+       
+       
+      </tr>
+      <tr>
+        
+        <td><img src="https://1.bp.blogspot.com/-1ti1BrBTddI/YVGDl2FOxJI/AAAAAAAACQ4/axRMSOIh3Es6dbIy19f75dDTYgCw_eKEQCLcBGAsYHQ/s184/Screenshot_2021-09-27-14-09-25-18_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" /></td>
+        <td>
+        <br>
+        <br>
+        <br>
+        <div class="dtl">
+        <h1>
+        Ashwani Mangal
+        </h1>
+        <h2>
+        26years
+        </h2>
+        <br>
+        <br>
+        <p >
+        <br>
+   Vastu Astrology 
+        <br>
+        
+        
+        English, Hindi
+        
+        <br>
+       <br>
+        <b>
+        Rs 100/Month
+        </b>
+        </p>
+        <br>
+      
+        <button >
+        Take a Call
+        </button>
+        </div></td>
+       
+        
+      </tr>
+      
+      
+      
+      <tr>
+     
+        <td><img src="https://1.bp.blogspot.com/-nt9wh8-IDcE/YVGDmKYDXPI/AAAAAAAACQ8/lPL5Qhc3qo4tycQqjD27i0Hie0nrYANXgCLcBGAsYHQ/s177/Screenshot_2021-09-27-14-09-42-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" /></td>
+        <td>
+        <br>
+        <br><br>
+        <br>
+        
+        <div class="dtl">
+        <h1>
+        Dr. Shripathi Tripahi Daivgya
+        </h1>
+        <h2>
+        20years
+        </h2>
+        <br>
+        <br>
+        <p>
+   Vedic Astrology
+        <br>
+        
+        
+        English, Hindi
+        
+        <br>
+       <br>
+        <b>
+  3     Rs 300/Month
+        </b>
+        </p>
+        <br>
+      
+        <button >
+        Take a Call
+        </button>
+        </div></td>
+        
+       
+      </tr>
+      
+       <tr>
+        
+        <td><img src="https://1.bp.blogspot.com/-lJ0G8rvGHLs/YVGDm0WLtpI/AAAAAAAACRA/CnhinhZv-eM5Fj3Eph8M25FFv5V7h_EEgCLcBGAsYHQ/s185/Screenshot_2021-09-27-14-10-07-06_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" /></td>
+        <td>
+        
+        <br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br><div class="dtl">
+        <h1>
+        Acharya Arvind Mishra
+        </h1>
+        <h2>
+        25 years
+        </h2>
+        <p>
+        Coffee cup reading, Falit Jyotish
+        Kundali Grah Dosh,Vastu Astrology,
+        Vedic Astrology, Palmistry, Numerology, Face Reading,Tarot
+        <br>
+        </br>
+        English, Hindi
+        
+        <br>
+        <br>
+        <b>
+        Rs 100/Month
+        </b>
+        </p>
+        <br>
+      
+        <button >
+        Take a Call
+        </button>
+        </div></td>
+        
+        
+      </tr>
+       <tr>
+        
+        <td><img src="https://1.bp.blogspot.com/-vtjovaNcWM4/YVGDneiDxRI/AAAAAAAACRE/stJtfp4qpikcjxHs8-hfyHB9JiXMdedZQCLcBGAsYHQ/s182/Screenshot_2021-09-27-14-10-23-72_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" /></td>
+        <td><br>
+        <br>
+        <br><br><br>
+        <br>
+        <br>
+        <br><div class="dtl">
+        <h1>
+        Pandeysh Pandey
+        </h1>
+        <h2>
+        25 years
+        </h2>
+        <p>
+        Coffee cup reading, Falit Jyotish
+        Kundali Grah Dosh,Vastu Astrology,
+        Vedic Astrology, Palmistry, Numerology, Face Reading,Tarot
+        <br>
+        </br>
+        English, Hindi
+        
+        <br>
+        <br>
+        <b>
+  500   Rs 500/Month
+        </b>
+        </p>
+        <br>
+      
+        <button >
+        Take a Call
+        </button>
+        </div></td>
+        
+       
+      </tr>
+    </tbody>
+  </table>
+  <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+
+<!--All javascripts form hemburger menu and search filter are written here
+-->
+
+
+    <script>
+      function filter_table(This, table_id)
+{
+    let recordLists = document.querySelectorAll(`#${table_id}>*`);
+    if(recordLists)
+    {
+        hide_tr(recordLists);
+        recordLists.forEach(recordList=>{
+            let str   = recordList.innerText.toLowerCase(),
+                value = This.value.toLowerCase();
+
+            if(str.indexOf(value)>=0)
+            {
+                recordList.style.display = '';
+            }
+        });
+    }
+}
+
+
+function hide_tr(recordLists) {
+    recordLists.forEach(recordList=>{
+        recordList.style.display = 'none';
+    });
+}
+    </script>
+    <script>
+    function myFunction() {
+  var x = document.getElementById("hide");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    
+    </script>
+    
+     <script type="text/javascript">
+let table_sort_elements = document.querySelectorAll('.table_sort');
+if(table_sort_elements)
+{
+    table_sort_elements = Array.isArray(table_sort_elements) ? table_sort_elements : Object.values(table_sort_elements);
+    table_sort_elements.forEach(table_sort_element=>{
+        let thead_cells = table_sort_element.querySelectorAll('thead>tr>*');
+        if(thead_cells)
+        {
+            thead_cells = Array.from(thead_cells);
+
+            thead_cells.forEach((thead_cell, index)=>{
+                thead_cell.addEventListener('click', function(){
+                    this.classList.toggle('asc');
+                    sortTableByColumn(table_sort_element, index, !this.classList.contains('asc'));
+                });
+            });
+        }
+    });
+}
+
+
+function sortTableByColumn(table, column, desc=false) 
+{
+    let tbody = table.querySelector('tbody'),
+        rows  = tbody.querySelectorAll('tr');
+
+    rows  = rows.isArray ? rows : Object.values(rows);
+
+    function compare(a, b) {
+        // console.log(a.children[column], b.children[column]);
+        let aText = a.children[column].innerText.trim(),
+            bText = b.children[column].innerText.trim();
+        
+        return (aText < bText) ? -1 : 1;
+    }
+
+    rows.sort(compare);
+
+    if(desc) rows.reverse();
+
+    tbody.innerHTML = '';
+
+    let i = 0;
+    while (i<rows.length) {
+        tbody.appendChild(rows[i]);
+        i++;
+    }
+}
+
+</script>
+</body>
+
+</html>

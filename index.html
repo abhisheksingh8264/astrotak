@@ -1,0 +1,865 @@
+<html>
+<head>
+<title>
+Astro Tak
+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+<style>
+body{
+    color:black;
+    background-size:cover;
+    font-size:16px;
+   font-family: 'Mitr', sans-serif;
+    letter-spacing:0.7px;
+    font-weight:300;
+}
+.elements{
+    
+    height:100%;
+    align-items:center;
+}
+.header{
+    height:90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    
+    
+}
+
+.text{
+    width:50%;
+    letter-spacing:0.2px;
+    align-item:left;
+    margin-left:60px;
+   
+    
+    margin-top:100px;
+}
+.quote1{
+    width:100%;
+}
+.logoG{
+    
+    float:right;
+    margin-top:-100px;
+    margin-right:-120px;
+    align-item:center;
+    
+    }
+    .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    font-size: 12px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: #eeeeee;
+}
+
+.nav__link--active {
+    color:#FF5733 ;
+}
+
+.nav__icon {
+    font-size: 18px;
+}
+
+
+
+.heading h1{
+    font-size:22px;
+    color:black;
+    font-weight:bold;
+    margin-left:30px;
+    margin-right:30px;
+    line-height:70px;
+}
+.heading h1 a {
+    
+    text-decoration:none;
+    font-size:16px;
+    float:right;
+    color:#FF5733;
+    margin-right:10px;
+}
+.heading p{
+    margin-left:30px;
+    margin-right:30px;
+    letter-spacing:0.5px;
+    line-spacing:5px;
+}
+
+.container { margin-top: 100px; padding: 32px;} .select-box { display: flex; width: 100%; flex-direction: column;} .select-box .options-container { background: #fff; color: #000; max-height: 0; width: 100%; opacity: 0; transition: all 0.4s; border-radius: ; overflow: hidden; order: 1;} .selected { background: #fff; border-radius: ; margin-bottom: ; color: grey; position: relative; order: 0;} .selected::after { content: ""; background: url("img/arrow-down.svg"); background-size: contain; background-repeat: no-repeat; position: absolute; height: 100%; width: 39px; right: 10px; top: 5px; transition: all 0.4s;} .select-box .options-container.active { max-height: 200px; opacity: 1; overflow-y: scroll;} .select-box .options-container.active + .selected::after { transform: rotateX(180deg); top: -6px;} .select-box .options-container::-webkit-scrollbar { width: 8px; background: #0d141f; border-radius: 0 8px 8px 0;} .select-box .options-container::-webkit-scrollbar-thumb { background: #525861; border-radius: 0 8px 8px 0;} .select-box .option,.selected { padding: 12px 24px; cursor: pointer;} .select-box .option:hover { background: #414b57;} .select-box label { cursor: pointer;} .select-box .option .radio { display: none;}
+
+
+.wrapper{
+    max-height:300px;
+    border:1px solid #fff;
+    display:flex;
+    overflow-x:auto;
+    margin-left:30px;
+    margin-right:30px;
+    
+    
+}
+.wrapper::-webkit-scrollbar{
+    width:0;
+}
+.wrapper .item{
+    min-width:140px;
+    height:140px;
+    line-height:300px;
+    text-align:center;
+    background-color:#fff;
+    overflow:hidden;
+    color:black;
+}
+.wrapper .item img {
+    width:70px;
+    margin-top:20px;
+}
+.wrapper .item h1{
+    font-size:16px;
+    color:black;
+    margin-top:-120px;
+    margin-left:;
+    font-weight:500px;
+}
+.wrapper .item p{
+    font-size:12px;
+    color:grey;
+    margin-top:-250px;
+   
+}
+
+
+.wrapper1{
+    max-height:320px;
+    border:1px solid #fff;
+    display:flex;
+    overflow-x:auto;
+    margin-top:50px;
+    margin-left:30px;
+    margin-right:30px;
+    
+    
+}
+.wrapper1::-webkit-scrollbar{
+    width:0;
+}
+.wrapper1 .item{
+    min-width:160px;
+    height:130px;
+    line-height:120px;
+    text-align:center;
+    background-color:#ddd;
+    overflow:hidden;
+    color:black;
+    margin-right:12px;
+    border:none;
+    border-radius:10px;
+}
+
+.wrapper2{
+    max-height:490px;
+    border:1px solid #fff;
+    display:flex;
+    overflow-x:auto;
+    margin-top:30px;
+    margin-left:30px;
+    margin-right:30px;
+    
+}
+
+
+.card img{
+height:100;
+width:130;
+margin-left:10px;
+margin-right:4px;
+margin-top:10px;
+}
+.card h1{
+
+font-size:16px;
+margin-left:10px;
+
+}
+.card h2{
+float:right;
+font-size:16px;
+margin-top:;
+margin-right:10px;
+color:#FF5733;
+}
+.card p{
+
+font-size:14px;
+color:black;
+font-weight:309;
+margin-left:-45px;
+margin-top:-20px;
+
+
+}
+.card .price{
+
+font-size:14px;
+
+color:black;
+font-weight:300;
+margin-left:-118px;
+margin-bottom:-30px;
+}
+
+.card button{
+
+background:#FF5733;
+border:none;
+color:white;
+float:right;
+border-radius:2px;
+font-size:12px;
+width:70px;
+height:20px;
+margin-top:px;
+margin-right:10px;
+}
+.wrapper2::-webkit-scrollbar{
+    width:0;
+}
+.wrapper2 .item{
+    min-width:200px;
+    height:290px;
+    line-height:;
+    text-align:center;
+    background-color:#fff;
+    overflow:hidden;
+    color:black;
+    margin-right:12px;
+    border-radius:20px;
+    border-right:0.07px solid #E0E0E0;
+    border-bottom:2px solid #E0E0E0;
+    border-top:0.07px solid #E0E0E0;
+    border-left:0.07px solid #E0E0E0;
+    
+}
+.wrapper2 .card img{
+height:120;
+width:170;
+margin-left:10px;
+margin-right:4px;
+margin-top:10px;
+}
+
+.wrapper2 h1{
+font-size:18px;
+float:left;
+margin-top:;
+margin-left:15px;
+
+}
+
+
+.wrapper3{
+    max-height:320px;
+    border:1px solid #fff;
+    display:flex;
+    overflow-x:auto;
+    margin-top:30px;
+    margin-left:20px;
+    margin-right:20px;
+    
+}
+.wrapper3::-webkit-scrollbar{
+    width:0;
+}
+.wrapper3 .item{
+    min-width:260px;
+    height:180px;
+    line-height:200px;
+    text-align:center;
+    background-color:#fff;
+    overflow:hidden;
+    color:black;
+    margin-right:2px;
+    margin-left:10px;
+}
+
+
+
+
+.wrapper4{
+    max-height:400px;
+    border:1px solid #fff;
+    display:flex;
+    overflow-x:auto;
+    margin-right:30px;
+    
+}
+.wrapper4::-webkit-scrollbar{
+    width:0;
+}
+.wrapper4 .item{
+    min-width:200px;
+    height:200px;
+    line-height:200px;
+    text-align:center;
+    background-color:#ddd;
+    overflow:hidden;
+    color:black;
+    
+    margin-left:30px;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); *{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; } nav{  width: 100%;  align-items: center; justify-content: space-between; padding: 0 50px 0 100px; flex-wrap: wrap; } nav .logo{ color: #fff; font-size: 35px; font-weight: 600; } nav ul{ display: flex; flex-wrap: wrap; list-style: none; } nav ul li{ margin: 0 5px; } nav ul li a{ color: #f2f2f2; text-decoration: none; font-size: 18px; font-weight: 500; padding: 8px 15px; border-radius: 5px; letter-spacing: 1px; transition: all 0.3s ease; } nav ul li a.active, nav ul li a:hover{ color: #111; background: #fff; } nav .menu-btn i{ color: #fff; font-size: 22px; cursor: pointer; display: none; } input[type="checkbox"]{ display: none; } @media (max-width: 1000px){ nav{ padding: 0 40px 0 50px; } } @media (max-width: 2020px) { nav .menu-btn i{ display: block; } #click:checked ~ .menu-btn i:before{ content: "\f00d"; } nav ul{ position: fixed; top: 80px; left: -100%; background: #111; height: 100vh; width: 100%; text-align: center; display: block; transition: all 0.3s ease; } #click:checked ~ ul{ left: 0; } nav ul li{ width: 100%; margin: 40px 0; } nav ul li a{ width: 100%; margin-left: -100%; display: block; font-size: 20px; transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); } #click:checked ~ ul li a{ margin-left: 0px; } nav ul li a.active, nav ul li a:hover{ background: none; color: cyan; } } .content{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: -1; width: 100%; padding: 0 30px; color: #1b1b1b; } .content div{ font-size: 20px; font-weight: 700; }
+
+.Copyright{
+    margin-top:20px;
+    margin-bottom:70px;
+}
+
+
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+
+<div class="containers">
+
+<div class="header">
+<nav>
+
+
+
+<input type="checkbox" id="click">
+
+<label for="click" class="menu-btn">
+
+<img src="https://1.bp.blogspot.com/-NsHsajLuYiM/YU6QGtKqg_I/AAAAAAAAAmg/yRdXhqBU-5gVXKWTxr_mNJMsfa6T3jORgCLcBGAsYHQ/s28/hamburger.png" style="position:absolute; margin-top:30px; height:20px;float:left; margin-left:-20px;"/>
+
+</label>
+
+<ul>
+
+<li><a class="active" href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Services</a></li>
+
+<li><a href="#">Gallery</a></li>
+
+<li><a href="#">Feedback</a></li>
+
+</ul>
+
+</nav>
+
+
+<center>
+<img src="https://1.bp.blogspot.com/-YIRdEO9BVAs/YU6QTDaY1tI/AAAAAAAAAno/Ch3kTbpusSIQWnkI7LOAJUE5E8DL-7FuQCLcBGAsYHQ/s309/logo.png" style="height:80px; margin-left:-50px; position:absolute;"/>
+</center>
+<img src="https://1.bp.blogspot.com/-yFF7hkVg0sM/YU6QTFW52jI/AAAAAAAAAns/ty-Rhcm3MZQObZYYIzhSyFxve-c6ERaJwCLcBGAsYHQ/s114/profile.png" style="height:30px; float:right;margin-top:23px; margin-right:20px;"/>
+
+</div>
+
+<div class="elements">
+
+<div class="quote1">
+<div class="text">
+</br>
+<p>
+<span style="font-size:20px; color:blue; font-weight:bold; margin-left:-20px;">""</span> There is no baot better than horoscope to help a man cross over the sea of life <span style="font-size:20px; color:blue; font-weight:bold; margin-left:"";>""</span>
+
+<br>
+<center>
+<p style="color:#B3B6B7;">
+
+-Varamihira
+</p>
+</center>
+</p>
+<div class="logoG">
+<img src="https://1.bp.blogspot.com/-wJAtXd7L_NY/YU6kkExUFhI/AAAAAAAAAow/_eI2Lrrh5Lc4hoxMLd-Cx_T8JeHdni8bgCLcBGAsYHQ/s1280/20210925_095427.png" style="height:100px; float:right; border:1px solid blue; border-radius:50%;"/>
+</div>
+</div>
+</div>
+<!--Top Slider Section for-->
+<div class="wrapper1">
+<div class="item"><img src="https://1.bp.blogspot.com/-POAMVlnA7N4/YVFVAIjdelI/AAAAAAAACQA/Lf6EeXxL8VoIZHsopiRfsxl3i83zfyY4gCLcBGAsYHQ/s311/Screenshot_2021-09-27-10-51-10-27_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%; height:99%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-gm82_a3HUR0/YVKzpybsJgI/AAAAAAAACRU/1zRgKKeZZ6gtfklg0ziiTv0TLcWniRP_QCLcBGAsYHQ/s372/Screenshot_2021-09-28-11-47-47-92_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%; height:99%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-POAMVlnA7N4/YVFVAIjdelI/AAAAAAAACQA/Lf6EeXxL8VoIZHsopiRfsxl3i83zfyY4gCLcBGAsYHQ/s311/Screenshot_2021-09-27-10-51-10-27_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%; height:99%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-POAMVlnA7N4/YVFVAIjdelI/AAAAAAAACQA/Lf6EeXxL8VoIZHsopiRfsxl3i83zfyY4gCLcBGAsYHQ/s311/Screenshot_2021-09-27-10-51-10-27_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%; height:99%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-POAMVlnA7N4/YVFVAIjdelI/AAAAAAAACQA/Lf6EeXxL8VoIZHsopiRfsxl3i83zfyY4gCLcBGAsYHQ/s311/Screenshot_2021-09-27-10-51-10-27_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%; height:99%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-POAMVlnA7N4/YVFVAIjdelI/AAAAAAAACQA/Lf6EeXxL8VoIZHsopiRfsxl3i83zfyY4gCLcBGAsYHQ/s311/Screenshot_2021-09-27-10-51-10-27_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="width:100%; height:99%;"/></div>
+
+
+</div>
+
+
+<br>
+<div class="heading">
+
+<h1>
+Daily Horoscope <a href="#" >  See All ></a>
+</h1>
+
+<p>
+Read your daily horoscope based on your sunsign, select your jodiac sign and give the right start to your day
+</p>
+
+</div>
+<div class="wrapper">
+
+<div class="item"><img src="https://1.bp.blogspot.com/-uZgSQzy4erU/YU_iOiEwe-I/AAAAAAAACOk/pdCNFdPUvvIFVKAVkMHkCgRJugROfstjgCLcBGAsYHQ/s177/Screenshot_2021-09-26-08-28-31-39_40deb401b9ffe8e1df2f1cc5ba480b12.png" />
+
+<h1>
+Aries
+</h1>
+<p>
+March 21-April 19
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-D8P4bGG7kmI/YU_iOndBnsI/AAAAAAAACOo/FqLT2D4EyxkqlUvgZM46Jp0GsG_cJGeIACLcBGAsYHQ/s178/Screenshot_2021-09-26-08-28-57-39_40deb401b9ffe8e1df2f1cc5ba480b12.png" />
+<h1>
+Taurus
+</h1>
+<p>
+April 20-May 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-vs2ef95RJow/YU_iOgsJB0I/AAAAAAAACOs/RE4EE94deDwz28kbB5bqX7TWxKxSiIJZACLcBGAsYHQ/s176/Screenshot_2021-09-26-08-29-16-58_40deb401b9ffe8e1df2f1cc5ba480b12.png"/>
+<h1>
+Gemini
+</h1>
+<p>
+May 21-June 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-4D7c_D2RARs/YVE_QqIn6RI/AAAAAAAACO8/oR2g9BDxG9ILOJ7hjJPmuxQu9ocMp-tiACLcBGAsYHQ/s1280/20210927_085248.png" />
+
+<h1>
+Cancer
+</h1>
+<p>
+Jun 21-July 19
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-aRhSI8eXzk8/YVE_Qs5NZ2I/AAAAAAAACPE/-Se5CuxW2DMSPznUMJzIVnqR3exan-9tgCLcBGAsYHQ/s1280/20210927_085536.png" />
+<h1>
+Leo
+</h1>
+<p>
+July 21-Aug 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-90bQggm3AqQ/YVE_Qjm0SbI/AAAAAAAACPA/plWfFQXq8isS8pn7hJn4dQazGdX129w7QCLcBGAsYHQ/s1280/20210927_085704.png"/>
+<h1>
+Virgo
+</h1>
+<p>
+Aug 21-Sep 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-7Vr8TcdS_og/YVE_pZsCEsI/AAAAAAAACPw/sgKyV493AgQMSBtU_H2ViWtOvOiR9SmFgCLcBGAsYHQ/s1280/20210927_092049.png" />
+
+<h1>
+Libra
+</h1>
+<p>
+Sep 21-Oct 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-A_BzJNsmLCg/YVE_Ru-On9I/AAAAAAAACPI/M5JjpnUD2ew-_8bm3Q6kdUApHVJCLloKwCLcBGAsYHQ/s1280/20210927_091019.png" />
+<h1>
+Scorpio
+</h1>
+<p>
+Oct 21-Nov 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-pp2BMw5xaMI/YVE_R-JmMuI/AAAAAAAACPM/bHEG0h24_GkCT0lqKmgJfoekpvzdvLLbgCLcBGAsYHQ/s1280/20210927_091336.png"/>
+<h1>
+Sagittarius
+</h1>
+<p>
+ Nov 21-Dec 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-1FHHgRqg9Jg/YVE_R1__KbI/AAAAAAAACPQ/h4wCdAVjsB81htETmqtTSLCAHSe1Fr4xQCLcBGAsYHQ/s1280/20210927_091502.png" />
+
+<h1>
+Capricorn
+</h1>
+<p>
+Dec 21-Jan 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-p4e7jyQQQXA/YVE_SpNtrKI/AAAAAAAACPU/C93pgWLk6wAUc8fmH0wyLcgJUPLs1iOYACLcBGAsYHQ/s1280/20210927_091644.png" />
+<h1>
+Aquarius
+</h1>
+<p>
+Jan 21-Feb 20
+</p>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-lDdJltM4LUM/YVE_TAOtIOI/AAAAAAAACPY/PIHa88gonzkjmtoNrCjrYivzQcH6V5PxACLcBGAsYHQ/s1280/20210927_091816.png"/>
+<h1>
+Pisces
+</h1>
+<p>
+Feb 21-March 20
+</p>
+</div>
+</div>
+
+<div class="heading">
+
+<h1>
+Talk to Astrologers<a href="#" >  See All ></a>
+</h1>
+
+<p>
+Leading Astrologers are just a phone call away. Our pabel Astrologers not just provide solutions to your life problems but also guide you so that you can take the right path towards growth and prosperity.
+</p>
+
+</div>
+<div class="wrapper2">
+<div class="item">
+<div class="card">
+
+<img src="https://1.bp.blogspot.com/-GE3aWGFRrx4/YVLD1P2On9I/AAAAAAAACRc/5HTr8jS-o0E1AceLkXG__eyTydKb2n8XwCLcBGAsYHQ/s529/Screenshot_2021-09-28-12-56-57-69_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+<br>
+<br>
+
+<h1>
+Arvind Shukla
+
+<h2>4.3</h2>
+</h1>
+<br>
+<br>
+<br>
+<p>
+Coffee Cup Reading
+</p>
+<div class="price">
+
+<br>
+<br>
+
+Rs 500/<br>min
+</div>
+<button>
+
+Talk Now
+</button>
+</div>
+</div>
+<div class="item"><div class="card">
+
+<img src="https://1.bp.blogspot.com/-1ti1BrBTddI/YVGDl2FOxJI/AAAAAAAACRI/fQJGhvti1hIDt7yCzfzm4x6SMzQBrD19wCPcBGAYYCw/s184/Screenshot_2021-09-27-14-09-25-18_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+<br>
+<br>
+
+<h1>
+Ashwani Mangal
+<h2>4.3</h2>
+</h1>
+<br>
+<br>
+<br>
+<p>
+Coffee Cup Reading
+</p>
+<div class="price">
+
+<br>
+<br>
+
+Rs 500/<br>min
+</div>
+<button>
+
+Talk Now
+</button>
+</div></div>
+<div class="item"><div class="card">
+
+<img src="https://1.bp.blogspot.com/-nt9wh8-IDcE/YVGDmKYDXPI/AAAAAAAACRI/eyP-YYtkgYcq82_iDeHoDR9RjC7O7PiSwCPcBGAYYCw/s177/Screenshot_2021-09-27-14-09-42-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+<br>
+<br>
+
+<h1>
+Dr. Sripati Tripathi
+
+<h2>4.3</h2>
+</h1>
+<br>
+<br>
+<br>
+<p>
+Coffee Cup Reading
+</p>
+<div class="price">
+
+<br>
+<br>
+
+Rs 500/<br>min
+</div>
+<button>
+
+Talk Now
+</button>
+</div></div>
+<div class="item"><div class="card">
+
+<img src="https://1.bp.blogspot.com/-lJ0G8rvGHLs/YVGDm0WLtpI/AAAAAAAACRM/4aVdeTv3_CgtFvm5Cg29AqtmwJaaSsnUQCPcBGAYYCw/s185/Screenshot_2021-09-27-14-10-07-06_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+<br>
+<br>
+
+<h1>
+Acharya Arvind
+
+<h2>4.3</h2>
+</h1>
+<br>
+<br>
+<br>
+<p>
+Coffee Cup Reading
+</p>
+<div class="price">
+
+<br>
+<br>
+
+Rs 500/<br>min
+</div>
+<button>
+
+Talk Now
+</button>
+</div></div>
+<div class="item"><div class="card">
+
+<img src="https://1.bp.blogspot.com/-vtjovaNcWM4/YVGDneiDxRI/AAAAAAAACRQ/aCYgSsCUcl8pi5IohxJXradNER8O-x7DwCPcBGAYYCw/s182/Screenshot_2021-09-27-14-10-23-72_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+<br>
+<br>
+
+<h1>
+Shailend Pandey
+
+<h2>4.3</h2>
+</h1>
+<br>
+<br>
+<br>
+<p>
+Coffee Cup Reading
+</p>
+<div class="price">
+
+<br>
+<br>
+
+Rs 500/<br>min
+</div>
+<button>
+
+Talk Now
+</button>
+</div></div>
+<div class="item"><div class="card">
+
+<img src="https://1.bp.blogspot.com/-GE3aWGFRrx4/YVLD1P2On9I/AAAAAAAACRc/5HTr8jS-o0E1AceLkXG__eyTydKb2n8XwCLcBGAsYHQ/s529/Screenshot_2021-09-28-12-56-57-69_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" />
+<br>
+<br>
+
+<h1>
+Arvind Shukla
+
+<h2>4.3</h2>
+</h1>
+<br>
+<br>
+<br>
+<p>
+Coffee Cup Reading
+</p>
+<div class="price">
+
+<br>
+<br>
+
+Rs 500/<br>min
+</div>
+<button>
+
+Talk Now
+</button>
+</div></div>
+
+
+</div>
+
+<div class="heading" >
+
+<h1>
+Reports<a href="#" >  See All ></a>
+</h1>
+
+<p>
+Astrologer report or what is known as Horoscope report is basically an indepth look at your birth chart. Horoscope will look at various planetery position in your birth chart and also derive relationships and angle to understand your personality and traits.
+</p>
+<div class="wrapper3">
+<div class="item">
+<img src="https://1.bp.blogspot.com/-ZzmlwkUngow/YVLYypDf3iI/AAAAAAAACRk/3t3Qgyvy2WIv6yJCj6TW2YwwxbQFaxUVgCLcBGAsYHQ/s483/Screenshot_2021-09-28-14-25-52-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"  style="height:180px;"/>
+
+</div>
+<div class="item">
+
+<img src="https://1.bp.blogspot.com/-ZzmlwkUngow/YVLYypDf3iI/AAAAAAAACRk/3t3Qgyvy2WIv6yJCj6TW2YwwxbQFaxUVgCLcBGAsYHQ/s483/Screenshot_2021-09-28-14-25-52-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"  style="height:180px;"/>
+
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-ZzmlwkUngow/YVLYypDf3iI/AAAAAAAACRk/3t3Qgyvy2WIv6yJCj6TW2YwwxbQFaxUVgCLcBGAsYHQ/s483/Screenshot_2021-09-28-14-25-52-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"  style="height:180px;"/>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-ZzmlwkUngow/YVLYypDf3iI/AAAAAAAACRk/3t3Qgyvy2WIv6yJCj6TW2YwwxbQFaxUVgCLcBGAsYHQ/s483/Screenshot_2021-09-28-14-25-52-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"  style="height:180px;"/>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-ZzmlwkUngow/YVLYypDf3iI/AAAAAAAACRk/3t3Qgyvy2WIv6yJCj6TW2YwwxbQFaxUVgCLcBGAsYHQ/s483/Screenshot_2021-09-28-14-25-52-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"  style="height:180px;"/>
+</div>
+<div class="item"><img src="https://1.bp.blogspot.com/-ZzmlwkUngow/YVLYypDf3iI/AAAAAAAACRk/3t3Qgyvy2WIv6yJCj6TW2YwwxbQFaxUVgCLcBGAsYHQ/s483/Screenshot_2021-09-28-14-25-52-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"  style="height:180px;"/>
+</div>
+
+
+</div>
+</div>
+
+<div class="heading" >
+<h1>
+Ask a Question
+</h1>
+
+<p>
+Astrologer report or what is known as Horoscope report is basically an indepth look at your birth chart. Horoscope will look at various planetery position in your birth chart and also derive relationships and angle to understand your personality and traits.
+</p>
+<br><br>
+</div>
+
+<!--Selection Section-->
+
+<div class="selectA" style="margin-top:-90px; align-item:center;">
+<div class="container" style="background-color:#F5EEF8;margin-left:35px;
+color:black; width:86%;"> <h2>Choose Category</h2> <br><div class="select-box"> <div class="options-container"> <div class="option"> <input type="radio" class="radio" id="automobiles" name="category" /> <label for="automobiles">Love</label> </div> <div class="option"> <input type="radio" class="radio" id="film" name="category" /> <label for="film">Bussiness</label> </div> <div class="option"> <input type="radio" class="radio" id="science" name="category" /> <label for="science">Education</label> </div> <div class="option"> <input type="radio" class="radio" id="art" name="category" /> <label for="art">Art</label> </div> <div class="option"> <input type="radio" class="radio" id="music" name="category" /> <label for="music">Work</label> </div> <div class="option"> <input type="radio" class="radio" id="travel" name="category" /> <label for="travel">Self</label> </div> <div class="option"> <input type="radio" class="radio" id="sports" name="category" /> <label for="sports">Sports</label> </div> <div class="option"> <input type="radio" class="radio" id="news" name="category" /> <label for="news">Life</label> </div> <div class="option"> <input type="radio" class="radio" id="tutorials" name="category" /> <label for="tutorials">Money</label> </div> </div> <div class="selected" style="height:40px;"> Select a Category: Love, career,more.<img src="https://1.bp.blogspot.com/-XwrqdxPfyjI/YU7zs6CT6KI/AAAAAAAACOY/kkaVhtE457k_inCSbYj31ue7LwwNmcy2gCLcBGAsYHQ/s512/60995.png" style="float:right; height:10px;"/>
+
+</br>
+</br>
+
+</div> </div> </div>
+
+</div>
+<div style=" background:#F5EEF8;height:30px;width:86%;margin-left:35px;">
+<span style="color:black; font-weight:bold;margin-left:35px;font-size:14px;">Rs 99</span>
+<span style="font-size:14px;">
+(Including GST)
+</span>
+<span style="color:black;font-weight:bold;float:right; font-size:14px;  ">
+&nbsp;&nbsp;
+Idea what to ask
+&nbsp;
+<button style="width:70px; height:20px; border-radius:2px; border:none;  font-size:8px; color:white; background:orange;float:right;margin-right:10px;margin-top:-1;">
+Ask a question
+</button>
+</span>
+
+
+</div>
+
+<br><div class="heading" margin-left:8px; >
+<h1>
+Hear from our Happy Customers!
+</h1>
+</div>
+<br>
+<div class="wrapper4">
+<div class="item"><img src="https://1.bp.blogspot.com/-idcAYosTiy4/YVMT7pw8R2I/AAAAAAAACRs/uX0HDgPIey0gqGllbXgafDtd0VyXBm1dwCLcBGAsYHQ/s489/Screenshot_2021-09-28-18-38-11-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="height:210px;width:100%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-idcAYosTiy4/YVMT7pw8R2I/AAAAAAAACRs/uX0HDgPIey0gqGllbXgafDtd0VyXBm1dwCLcBGAsYHQ/s489/Screenshot_2021-09-28-18-38-11-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="height:210px;width:100%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-idcAYosTiy4/YVMT7pw8R2I/AAAAAAAACRs/uX0HDgPIey0gqGllbXgafDtd0VyXBm1dwCLcBGAsYHQ/s489/Screenshot_2021-09-28-18-38-11-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="height:210px;width:100%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-idcAYosTiy4/YVMT7pw8R2I/AAAAAAAACRs/uX0HDgPIey0gqGllbXgafDtd0VyXBm1dwCLcBGAsYHQ/s489/Screenshot_2021-09-28-18-38-11-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="height:210px;width:100%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-idcAYosTiy4/YVMT7pw8R2I/AAAAAAAACRs/uX0HDgPIey0gqGllbXgafDtd0VyXBm1dwCLcBGAsYHQ/s489/Screenshot_2021-09-28-18-38-11-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="height:210px;width:100%;"/></div>
+<div class="item"><img src="https://1.bp.blogspot.com/-idcAYosTiy4/YVMT7pw8R2I/AAAAAAAACRs/uX0HDgPIey0gqGllbXgafDtd0VyXBm1dwCLcBGAsYHQ/s489/Screenshot_2021-09-28-18-38-11-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" style="height:210px;width:100%;"/></div>
+
+
+</div>
+
+<div class="copyright">
+<p>
+<center>
+©Copyright 2020. All rights reserved
+</center>
+</p>
+</br>
+</br>
+</br>
+</br>
+</div>
+<!-- Botton Navigation Bar -->
+
+<nav class="nav">
+  <a href="index.html" class="nav__link nav__link--active">
+    <img src="https://1.bp.blogspot.com/-bpMxjoauyCg/YU6QHVmebBI/AAAAAAAAAmo/yErNcdDA2MYZZCvpsM6VPrFwXJnEc46uACLcBGAsYHQ/s53/home.png" style="height:20px;"/>
+    <span class="nav__text">Home</span>
+  </a>
+  <a href="index1.html" class="nav__link ">
+    <img src="https://1.bp.blogspot.com/-BsU92_U7eVE/YU6QU9TCjNI/AAAAAAAAAoA/Kx5o8_vVhQg1dDqvl95Khac4NAlyVOc4ACLcBGAsYHQ/s55/talk.png" style="height:17px;"/>
+    <span class="nav__text">Talk to astrologers</span>
+  </a>
+  <a href="#" class="nav__link">
+    <img src="https://1.bp.blogspot.com/-B8kVXm8qAOA/YU6QFYsf7KI/AAAAAAAAAmY/iwiBAJ6TJ7onb7xUxAmjS-GAoCmYZMyMgCLcBGAsYHQ/s53/ask.png" style="height:20px;"/>
+    <span class="nav__text">Ask a Question</span>
+  </a>
+  <a href="#" class="nav__link">
+  <img src="https://1.bp.blogspot.com/-s3KaLGjZwqs/YU6QT_Af3dI/AAAAAAAAAnw/iNnqldVQCUIBYtD98SUbWlp-EHCJZ0mzQCLcBGAsYHQ/s54/reports.png" style="height:20px"/>
+    <span class="nav__text">Reports</span>
+  </a>
+  
+</nav>
+</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+const selected = document.querySelector(".selected");const optionsContainer = document.querySelector(".options-container"); const optionsList = document.querySelectorAll(".option"); selected.addEventListener("click", () => { optionsContainer.classList.toggle("active");}); optionsList.forEach(o => { o.addEventListener("click", () => { selected.innerHTML = o.querySelector("label").innerHTML; optionsContainer.classList.remove("active"); });});
+</script>
